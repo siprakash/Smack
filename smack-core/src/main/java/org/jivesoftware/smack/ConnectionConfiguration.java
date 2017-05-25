@@ -364,7 +364,12 @@ public abstract class ConnectionConfiguration {
          * be used. If only TLS encryption is available from the server, the connection
          * will fail.
          */
-        disabled
+        disabled,
+
+        /**
+         * Legacy SSL encryption. Added from old Smack version by Valery Miller.
+         */
+        legacy
     }
 
     /**

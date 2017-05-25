@@ -586,6 +586,19 @@ public class XMPPTCPConnection extends AbstractXMPPConnection {
                             break innerloop;
                         }
                     }
+
+                    // support legacy SSL
+                    if (ConnectionConfiguration.SecurityMode.legacy == config.getSecurityMode()) {
+                        try {
+                            proceedTLSReceived();
+                        } catch (Exception e) {
+                            String errorMessage = "Could not enable SSL encryption while connecting to "
+                                    + host + ":" + port + ".";
+                            throw ConnectionException.from(failedAddresses);
+                        }
+                    }
+                    //
+
                     LOGGER.finer("Established TCP connection to " + inetAddressAndPort);
                     // We found a host to connect to, return here
                     this.host = host;
