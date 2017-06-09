@@ -31,7 +31,6 @@ public class BookmarkedURL implements SharedBookmark {
 
     protected BookmarkedURL(String URL) {
         this.URL = URL;
-        this.name = "";
     }
 
     protected BookmarkedURL(String URL, String name, boolean isRss) {

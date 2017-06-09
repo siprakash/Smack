@@ -252,6 +252,7 @@ public class Bookmarks implements PrivateData {
 
     private static BookmarkedURL getURLStorage(XmlPullParser parser) throws IOException, XmlPullParserException {
         String name = parser.getAttributeValue("", "name");
+        if (name == null) name = "";
         String url = parser.getAttributeValue("", "url");
         String rssString = parser.getAttributeValue("", "rss");
         boolean rss = rssString != null && "true".equals(rssString);
@@ -273,6 +274,7 @@ public class Bookmarks implements PrivateData {
 
     private static BookmarkedConference getConferenceStorage(XmlPullParser parser) throws XmlPullParserException, IOException {
         String name = parser.getAttributeValue("", "name");
+        if (name == null) name = "";
         String autojoin = parser.getAttributeValue("", "autojoin");
         EntityBareJid jid = ParserUtils.getBareJidAttribute(parser);
 
