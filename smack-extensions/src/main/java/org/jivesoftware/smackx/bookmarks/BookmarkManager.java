@@ -248,6 +248,12 @@ public final class BookmarkManager {
         return privateDataManager.isSupported();
     }
 
+    public void cleanCache() {
+        synchronized (bookmarkLock) {
+            bookmarks = null;
+        }
+    }
+
     private Bookmarks retrieveBookmarks() throws NoResponseException, XMPPErrorException, NotConnectedException, InterruptedException {
         synchronized (bookmarkLock) {
             if (bookmarks == null) {
