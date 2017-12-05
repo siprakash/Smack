@@ -343,9 +343,9 @@ subprojects {
 					}
 
 					scm {
-						url 'https://github.com/igniterealtime/Smack'
-						connection 'scm:git:https://github.com/igniterealtime/Smack.git'
-						developerConnection 'scm:git:https://github.com/igniterealtime/Smack.git'
+						url 'https://github.com/siprakash/Smack'
+						connection 'scm:git:https://github.com/siprakash/Smack.git'
+						developerConnection 'scm:git:https://github.com/siprakash/Smack.git'
 					}
 
 					licenses {
