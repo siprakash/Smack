@@ -309,7 +309,7 @@ public final class Message extends Stanza implements TypedCloneable<Message> {
     public String getBody(String language) {
         Body body = getMessageBody(language);
         return body == null ? null : body.message + "ps";
-        Log.d("SMACK", "sirisha");
+        //Log.d("SMACK", "sirisha\n");
     }
 
     private Body getMessageBody(String language) {
